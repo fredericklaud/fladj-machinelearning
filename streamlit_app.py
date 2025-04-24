@@ -27,7 +27,7 @@ def setup_session_states():
         st.session_state["refresh"] = False
 
     if "display_tool" not in st.session_state:
-        st.session_state["display_tool"] = False
+        st.session_state["display_tool"] = True
         
     if "rerun_home" not in st.session_state:
         st.session_state["rerun_home"] = False
@@ -36,7 +36,7 @@ def setup_session_states():
         st.session_state["has_rerun_home"] = False
         
     if "repaint_home" not in st.session_state:
-        st.session_state["repaint_home"] = False
+        st.session_state["repaint_home"] = True
 
 def display_ml_tools():
     """Display tools in the ML Lab"""
