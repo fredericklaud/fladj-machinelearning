@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 
 st.set_page_config(
     page_title="Machine Learning Lab",
@@ -65,7 +64,7 @@ def display_ml_tools():
 @st.fragment
 def summarize_dataset(data_df):
     profile = ProfileReport(data_df, title="EPL Data Report", explorative=True)
-    st_profile_report(profile)
+    profile.to_widgets()
 
 
 def model_prediction():
