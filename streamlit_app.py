@@ -41,8 +41,8 @@ def setup_session_states():
 def display_ml_tools():
     """Display tools in the ML Lab"""
     ml_tools = [
-        ("Machine Learning Prediction", "Tool For Prediction", display_crystal_structure_prediction),
-        ("ML Model Training", "Tool For training ML models", structure_analysis),
+        ("Machine Learning Prediction", "Tool For Prediction", model_prediction),
+        ("ML Model Training", "Tool For training ML models", model_training),
     ]
     ml_tool_prompts = [
         "Tool to predict feature values",
@@ -60,6 +60,14 @@ def display_ml_tools():
             # st.session_state.display_tool = False
             return True
     return False
+
+def model_prediction():
+    pass
+
+
+def model_training():
+    pass
+
 
 @st.fragment
 def home_header():
