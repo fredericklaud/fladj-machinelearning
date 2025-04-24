@@ -16,7 +16,7 @@ def main():
     with ml_sidebar:
         st.write('**Welocme to ML-Rails**')
     
-    st.title('🖥Machine Learning on Rails')
+    st.title('🖥Machine Learning on on Rails')
     
     st.info("New century of Machine Learning")
     
