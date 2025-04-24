@@ -1,13 +1,10 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 👨‍🔬 Flad-j Machine Learning App
 
-Description of the app ...
 
+This is an app that will take through the different stages of the Machine Learning lifecycle
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fladj-machinelearning.streamlit.app/)
 
 ## GitHub Codespaces
 
