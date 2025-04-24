@@ -10,6 +10,7 @@ st.set_page_config(
         "about": "**A machine learning app to explore various Ml-algorithms on diverse data.**",
     },
 )
+ml_sidebar = st.sidebar
 st.title('🖥Machine Learning on Rails')
 
 st.info("New century of Machine Learning")
