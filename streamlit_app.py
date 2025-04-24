@@ -1,6 +1,15 @@
 import streamlit as st
 import pandas as pd
 
+
+st.set_page_config(
+    page_title="Unearthly Materials Lab",
+    page_icon="i",
+    layout="wide",
+    menu_items={
+        "about": "**A machine learning app to explore various Ml-algorithms on diverse data.**",
+    },
+)
 st.title('🖥Machine Learning on Rails')
 
 st.info("New century of Machine Learning")
