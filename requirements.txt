@@ -3,4 +3,3 @@ numpy
 pandas
 scikit-learn
 # ydata-profiling
-pkg-resources
