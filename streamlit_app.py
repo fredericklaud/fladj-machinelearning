@@ -1,5 +1,5 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+st.title('Machine Learning on Rails')
 
-st.write('Hello world!')
+st.info("New century of Machine Learning)
