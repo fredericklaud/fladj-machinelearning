@@ -89,6 +89,8 @@ def home_header():
         st.session_state.placeholder.markdown(intro)
         # st.session_state.display_tool = True
         tool_selected = display_um_tools()
+    else:
+        st.info('No painting would be done')
 
     # if st.session_state.cs_tool != "":
     #     paint_tool_page()
