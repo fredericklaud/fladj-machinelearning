@@ -1,8 +1,6 @@
 streamlit
 numpy
 pandas
-setuptools
 scikit-learn
-streamlit_pandas_profiling
 ydata-profiling
 pkg-resources
