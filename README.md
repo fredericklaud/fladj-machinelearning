@@ -12,11 +12,8 @@ This is an app that will take through the different stages of the Machine Learni
 
 ## Section Heading
 
-This is filler text, please replace this with text for this section.
+Coming soon!!!
 
 ## Further Reading
 
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+Coming soon!!!
