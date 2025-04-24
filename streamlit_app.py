@@ -38,6 +38,28 @@ def setup_session_states():
     if "repaint_home" not in st.session_state:
         st.session_state["repaint_home"] = False
 
+def display_ml_tools():
+    """Display tools in the ML Lab"""
+    ml_tools = [
+        ("Machine Learning Prediction", "Tool For Prediction", display_crystal_structure_prediction),
+        ("ML Model Training", "Tool For training ML models", structure_analysis),
+    ]
+    ml_tool_prompts = [
+        "Tool to predict feature values",
+        "Tool for training models",
+    ]
+
+    st.session_state.placeholder.markdown("---")
+    button_cols1 = st.session_state.placeholder.columns(3)
+    button_cols2 = st.session_state.placeholder.columns(3)
+
+    for i, ((tool_name, suffix, tool), help_text) in enumerate(zip(ml_tools, ml_tool_prompts)):
+        col = button_cols1[i] if i < 3 else button_cols2[i - 3]
+        if col.button(f"{tool_name} {suffix}", help=help_text):
+            st.session_state.cs_tool = tool
+            # st.session_state.display_tool = False
+            return True
+    return False
 
 @st.fragment
 def home_header():
@@ -68,8 +90,8 @@ def home_header():
         # st.session_state.display_tool = True
         tool_selected = display_um_tools()
 
-    if st.session_state.cs_tool != "":
-        paint_tool_page()
+    # if st.session_state.cs_tool != "":
+    #     paint_tool_page()
 
     if tool_selected:
         st.rerun()
