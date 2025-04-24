@@ -84,7 +84,7 @@ def home_header():
 
     # st.write(f"Repaint home is {st.session_state.repaint_home}\nDisplay tool is {st.session_state.display_tool}")
     if (st.session_state.repaint_home) & (not st.session_state.display_tool):
-        st.session_state.placeholder.title(":scales: Machine Learning Lab")
+        st.session_state.placeholder.title(":scales: Machine Learning on Rails")
 
         # st.session_state.repaint_home = False
         if "messages" not in st.session_state:
@@ -106,6 +106,12 @@ def home_header():
     if tool_selected:
         st.rerun()
 
+    st.info("Featuring EPL Data with including current season")
+    
+    epl_df = pd.read_csv('https://raw.githubusercontent.com/fredericklaud/fl-data/refs/heads/main/England%20CSV.csv')
+    with st.expander('EPL Data'):
+      st.write(epl_df)
+
 
 def main():
     setup_session_states()
@@ -115,13 +121,8 @@ def main():
         st.write('**Welocme to ML-Rails**')
 
     home_header()
-    st.title('🖥Machine Learning on Rails')
-    
-    st.info("New century of Machine Learning")
-    
-    epl_df = pd.read_csv('https://raw.githubusercontent.com/fredericklaud/fl-data/refs/heads/main/England%20CSV.csv')
-    with st.expander('EPL Data'):
-      st.write(epl_df)
+    # st.title('🖥Machine Learning on Rails')
+
 
 if __name__ == "__main__":
     main()
