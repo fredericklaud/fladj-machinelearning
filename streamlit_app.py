@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from modules import home_header
+from modules.home_decor import home_header
 
 st.set_page_config(
     page_title="Machine Learning Lab",
