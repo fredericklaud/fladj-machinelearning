@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from ydata_profiling import ProfileReport
+# from ydata_profiling import ProfileReport
 
 st.set_page_config(
     page_title="Machine Learning Lab",
@@ -123,7 +123,8 @@ def home_header():
 
     with data_report_tab:
         if epl_df is not None:
-            summarize_dataset(epl_df)
+            st.write("report coming soon")
+            # summarize_dataset(epl_df)
 
 
 def main():
