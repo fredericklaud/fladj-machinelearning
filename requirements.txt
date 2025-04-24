@@ -4,4 +4,4 @@ pandas
 scikit-learn
 streamlit_pandas_profiling
 ydata-profiling
-pkg_resources
+pkg-resources
