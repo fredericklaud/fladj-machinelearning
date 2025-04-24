@@ -3,7 +3,7 @@ import pandas as pd
 
 
 st.set_page_config(
-    page_title="Unearthly Materials Lab",
+    page_title="Machine Learning Lab",
     page_icon="i",
     layout="wide",
     menu_items={
