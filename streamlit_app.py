@@ -10,11 +10,19 @@ st.set_page_config(
         "about": "**A machine learning app to explore various Ml-algorithms on diverse data.**",
     },
 )
-ml_sidebar = st.sidebar
-st.title('🖥Machine Learning on Rails')
 
-st.info("New century of Machine Learning")
+def main():
+    ml_sidebar = st.sidebar
+    with ml_sidebar:
+        st.write('**Welocme to ML-Rails**')
+    
+    st.title('🖥Machine Learning on Rails')
+    
+    st.info("New century of Machine Learning")
+    
+    epl_df = pd.read_csv('https://raw.githubusercontent.com/fredericklaud/fl-data/refs/heads/main/England%20CSV.csv')
+    with st.expander('EPL Data'):
+      st.write(epl_df)
 
-epl_df = pd.read_csv('https://raw.githubusercontent.com/fredericklaud/fl-data/refs/heads/main/England%20CSV.csv')
-with st.expander('EPL Data'):
-  st.write(epl_df)
+if __name__ == "__main__":
+    main()
