@@ -11,11 +11,47 @@ st.set_page_config(
     },
 )
 
+@st.fragment
+def home_header():
+    placeholder = st.container()
+    tool_selected = False
+    if "placeholder" not in st.session_state:
+        st.session_state.placeholder = placeholder
+    else:
+        st.session_state.placeholder = st.container()
+
+    st.session_state.display_tool = False
+    st.session_state.placeholder.write("In home_header")
+    # with st.session_state.placeholder:
+
+    # st.write(f"Repaint home is {st.session_state.repaint_home}\nDisplay tool is {st.session_state.display_tool}")
+    if (st.session_state.repaint_home) & (not st.session_state.display_tool):
+        st.session_state.placeholder.title(":scales: Machine Learning Lab")
+
+        # st.session_state.repaint_home = False
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
+            # st.session_state.gre
+        intro = """👋 Welcome to Machine Learning on Rails. This app aims to take you through model training and prediction using well-known (existing)
+                      Machine Learning (ML) algorithms for classification, regression and clustering. You will be able to also load your own custom model to explore.
+                      Join as I seek to bring a deeper understanding of ML to many.
+                """
+        st.session_state.placeholder.markdown(intro)
+        # st.session_state.display_tool = True
+        tool_selected = display_um_tools()
+
+    if st.session_state.cs_tool != "":
+        paint_tool_page()
+
+    if tool_selected:
+        st.rerun()
+
+
 def main():
     ml_sidebar = st.sidebar
     with ml_sidebar:
         st.write('**Welocme to ML-Rails**')
-    
+    home_header()
     st.title('🖥Machine Learning on Rails')
     
     st.info("New century of Machine Learning")
